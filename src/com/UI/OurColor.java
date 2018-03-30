@@ -1,6 +1,6 @@
 package com.UI;
 
-public enum Color{
+public enum OurColor{
     RED,
     YELLOW,
     BLUE,
