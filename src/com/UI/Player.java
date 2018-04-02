@@ -3,7 +3,11 @@ package com.UI;
 public class Player {
     public OurColor color;
     public Piece[] pieces;
+    public Player(OurColor color)
+    {
+        color = this.color;
 
+    }
     public boolean IsWinner(){
         for (int i = 0; i < pieces.length ; i++) {
             if(!pieces[i].IsFinish()){
