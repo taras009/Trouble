@@ -17,15 +17,35 @@ public class TroubleBoard {
     private JFrame frame;
 
     public static void main(String[] args) throws IOException {
+        //initiate board
+        Board board = new Board();
 
 
+        // initiate player rotation
+
+
+        //begin plyer turns
+        while (!board.AnyWinners())
+        {
+            for (int i = 0; i <board.players.length ; i++) {
+                int roll = 0;
+                do {
+                    roll = board.die.Roll();
+                    //Turn stuff here
+
+
+
+
+                }while(roll == 6);
+
+            }
+        }
+
+        //display winner message
+
+
+        
         //integrate with board
-
-
-
-
-
-
 
         new TroubleBoard().createBoard();
     }
@@ -51,6 +71,7 @@ public class TroubleBoard {
         resetButton.addActionListener(new ResetButtonListener());
 
     }
+
     class ButtonListener implements ActionListener { //*** inner class for clicks
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -60,6 +81,7 @@ public class TroubleBoard {
             System.out.println(i); //
         }
     }// close ButtonListener
+
     class ResetButtonListener implements ActionListener {
 
         @Override

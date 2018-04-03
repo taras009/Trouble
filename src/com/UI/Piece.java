@@ -17,8 +17,4 @@ public class Piece {
             return false;
     }
 
-    public boolean CompletedLoop() {
-        return false;
-    }
-
 }
