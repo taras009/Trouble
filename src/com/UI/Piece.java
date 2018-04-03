@@ -1,9 +1,24 @@
 package com.UI;
 
 public class Piece {
-    public boolean IsHome(){return false;}
-    public boolean IsFinish(){return false;}
-    public boolean CompletedLoop(){return false;}
-   
-    public int Location(){return 1;}
+    public int Location;
+
+    public boolean IsHome() {
+        if (this.Location < 44 && this.Location > 27)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean IsFinish() {
+        if (this.Location > 43)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean CompletedLoop() {
+        return false;
+    }
+
 }

@@ -17,6 +17,16 @@ public class TroubleBoard {
     private JFrame frame;
 
     public static void main(String[] args) throws IOException {
+
+
+        //integrate with board
+
+
+
+
+
+
+
         new TroubleBoard().createBoard();
     }
 

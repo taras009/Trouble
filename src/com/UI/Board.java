@@ -4,8 +4,9 @@ public class Board {
     public PopOMatic die;
     public Player[] players;
     public int[] spaces;
-    //0-3 = red home  4-7 =green home 7-11=yellow home 12-15= blue home
-    //   16-43 = board space
+
+    //   0-27 = board space
+    //28-31 = red home  32-35 =green home 36-39=yellow home 40-43= blue home
     // 44-47= red finish 48-51= green finish 52-55= yellow finish 56-59 = blue finish
     Board(){
         die = new PopOMatic();
@@ -16,4 +17,5 @@ public class Board {
         players[3]= new Player(OurColor.BLUE);
         spaces = new int[60];
     }
+
 }
