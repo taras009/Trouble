@@ -11,10 +11,13 @@ public class MyDrawPanel extends JPanel {
     public static final int WIDTH = 650;
     public static final int HEIGHT = 650;
 
-    int x = 0;
-    int y = 0;
+    public int index = 1;
 
-    private ArrayList allPieces = new ArrayList();
+    private ArrayList<Pieces> allPieces = new ArrayList<Pieces>();
+    private ArrayList<MovePiece> movePieces = new ArrayList<MovePiece>();
+
+    public int x = 250;
+    public int y = 0;
 
     private String level =
             "#####&&&#####\n"
@@ -59,6 +62,7 @@ public class MyDrawPanel extends JPanel {
             } else if (item == '&') {
                 movePiece = new MovePiece(x, y);
                 allPieces.add(movePiece);
+                movePieces.add(movePiece);
                 x += SPACE;
             } else if (item == '$') {
                 basePiece = new BasePiece(x, y);
@@ -67,6 +71,7 @@ public class MyDrawPanel extends JPanel {
             }
 
         }
+
     }
 
     public void buildWorld(Graphics g) {
@@ -78,6 +83,10 @@ public class MyDrawPanel extends JPanel {
             g.drawImage(item.getImage(), item.x(), item.y(), this);
 
         }
+        Image image = new ImageIcon(this.getClass().getResource("images/player.png")).getImage();
+        g.drawImage(image, x, y, this);
+
+
     }
 
     @Override
@@ -86,19 +95,17 @@ public class MyDrawPanel extends JPanel {
         buildWorld(g);
     }
 
-    public void move(int diceNumber) {
-        while (diceNumber != 0) {
-            x += 100;
-            if (x >= WIDTH) {
-                y += 100;
-                x = 0;
-            }
-            diceNumber--;
+    public void move() {
+        x = movePieces.get(index).x();
+        y = movePieces.get(index).y();
+        index++;
+        if (index > 47) {
+            index = 0;
         }
     }
 
     public void restart() {
-        x = 0;
+        x = 250;
         y = 0;
     }
 }
