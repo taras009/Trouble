@@ -17,14 +17,14 @@ public class Board {
         players[3]= new Player(OurColor.BLUE);
         spaces = new int[60];
     }
-public boolean AnyWinners(){
-    for (int i = 0; i < players.length; i++) {
-        if(players[i].IsWinner()){
-            return true;
-        }
-    }
-    return false;
-}
+//public boolean AnyWinners(){
+//    for (int i = 0; i < players.length; i++) {
+//        if(players[i].IsWinner()){
+//            return true;
+//        }
+//    }
+//    return false;
+//}
 
 
 }

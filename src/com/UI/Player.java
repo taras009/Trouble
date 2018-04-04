@@ -22,17 +22,17 @@ public class Player {
                 return -1;
         }
     }
-
-    public boolean IsWinner() {
-        for (int i = 0; i < pieces.length; i++) {
-            if (!pieces[i].IsFinish()) {
-                //At least one piece is not in the finish position
-                return false;
-            }
-        }
-        //All pieces are in the Finish
-        return true;
-    }
+//
+//    public boolean IsWinner() {
+//        for (int i = 0; i < pieces.length; i++) {
+//            if (!pieces[i].IsFinish()) {
+//                //At least one piece is not in the finish position
+//                return false;
+//            }
+//        }
+//        //All pieces are in the Finish
+//        return true;
+//    }
 
     public boolean AnyPiecesHome() {
 
