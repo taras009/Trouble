@@ -4,16 +4,20 @@ import javax.swing.*;
 import java.awt.Image;
 import java.net.URL;
 
-public class Pieces {
+public class Pieces implements Comparable{
 
     private int x;
     private int y;
     private Image image;
 
+    private int index;
+
     public Pieces(int x, int y) {
         this.x = x;
         this.y = y;
     }
+
+
 
     public Image getImage() {
         return this.image;
@@ -31,6 +35,19 @@ public class Pieces {
         return this.y;
     }
 
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return (Integer.compare(this.getIndex(), ((Pieces) o).getIndex()));
+    }
 }
 class MovePiece extends Pieces {
 
