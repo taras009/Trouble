@@ -75,10 +75,10 @@ public class TroubleBoard {
     class ButtonListener implements ActionListener { //*** inner class for clicks
         @Override
         public void actionPerformed(ActionEvent e) {
-            //int i = popOMatic.Roll();
-            drawPanel.move();
+            drawPanel.diceNumber = popOMatic.Roll();
+            drawPanel.move(drawPanel.diceNumber);
             frame.repaint();
-            //System.out.println(i); //
+
         }
     }// close ButtonListener
 

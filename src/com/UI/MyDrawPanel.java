@@ -12,9 +12,9 @@ public class MyDrawPanel extends JPanel {
     public static final int WIDTH = 650;
     public static final int HEIGHT = 650;
 
-    public int index =1;
+    public int index = 1;
 
-    private ArrayList<Pieces>allPieces = new ArrayList<Pieces>();
+    private ArrayList<Pieces> allPieces = new ArrayList<Pieces>();
     private ArrayList<MovePiece> movePieces = new ArrayList<MovePiece>();
 
     public int x = 250;
@@ -35,9 +35,10 @@ public class MyDrawPanel extends JPanel {
                     + "#$$##&#&##$$#\n"
                     + "#####&&&#####\n";
 
-    int[] piecesOrder = {1,2,3,48,4,47,5,46,6,45,7,39,40,41,42,43,44,
-            8,9,10,11,12,13,38,14,37,36,35,34,33,32,20,
-            19,18,17,16,15,31,21,30,22,29,23,28,24,27,26,25};
+    int[] piecesOrder = {1, 2, 3, 48, 4, 47, 5, 46, 6, 45, 7, 39, 40, 41, 42, 43, 44,
+            8, 9, 10, 11, 12, 13, 38, 14, 37, 36, 35, 34, 33, 32, 20,
+            19, 18, 17, 16, 15, 31, 21, 30, 22, 29, 23, 28, 24, 27, 26, 25};
+    public int diceNumber;
 
 
     public MyDrawPanel() {
@@ -82,8 +83,7 @@ public class MyDrawPanel extends JPanel {
         }
         Collections.sort(movePieces);
 
-        }
-
+    }
 
     public void buildWorld(Graphics g) {
 
@@ -95,20 +95,30 @@ public class MyDrawPanel extends JPanel {
             g.drawImage(item.getImage(), item.x(), item.y(), this);
 
         }
+        g.fillRect(300,300,50,50);
+        g.setColor(Color.orange);
+        g.setFont(new Font("Verdana",Font.BOLD, 18));
+        g.drawString(String.valueOf(diceNumber), 318,330);
         Image image = new ImageIcon(this.getClass().getResource("Images/player.png")).getImage();
-        g.drawImage(image, x,   y, this);
+        g.drawImage(image, x, y, this);
+
 
     }
 
-    public void move(){
-        x = movePieces.get(index).x();
-        y = movePieces.get(index).y();
-        index++;
-        if(index > 47){
-            index = 0;
+
+    public void move(int diceNumber) {
+        while (diceNumber > 0) {
+            x = movePieces.get(index).x();
+            y = movePieces.get(index).y();
+            index++;
+            if (index > 47) {
+                index = 0;
+            }
+            diceNumber--;
+            repaint();
+
         }
     }
-
 
     @Override
     public void paint(Graphics g) {
@@ -117,9 +127,10 @@ public class MyDrawPanel extends JPanel {
     }
 
 
-
     public void restart() {
         x = 250;
         y = 0;
+        index = 1;
     }
+
 }
