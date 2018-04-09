@@ -25,21 +25,21 @@ public class TroubleBoard {
 
 
         //begin plyer turns
-//        while (!board.AnyWinners())
-//        {
-//            for (int i = 0; i <board.players.length ; i++) {
-//                int roll = 0;
-//                do {
-//                    roll = board.die.Roll();
-//                    //Turn stuff here
-//
-//
-//
-//
-//                }while(roll == 6);
-//
-//            }
-//        }
+        while (!board.AnyWinners())
+        {
+            for (int i = 0; i <board.players.length ; i++) {
+                int roll = 0;
+                do {
+                    roll = board.die.Roll();
+                    //Turn stuff here
+
+
+
+
+                }while(roll == 6);
+
+            }
+        }
 
         //display winner message
 

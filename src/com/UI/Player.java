@@ -5,7 +5,23 @@ public class Player {
     public Piece[] pieces;
 
     public Player(OurColor color) {
-        color = this.color;
+        this.color = color;
+        switch (color) {
+            case RED:
+                pieces= new Piece[]{new Piece(28),new Piece(29),new Piece(30),new Piece(31)};
+                break;
+            case GREEN:
+                pieces= new Piece[]{new Piece(32),new Piece(33),new Piece(34),new Piece(35)};
+                break;
+            case YELLOW:
+                pieces= new Piece[]{new Piece(36),new Piece(37),new Piece(38),new Piece(39)};
+                break;
+            case BLUE:
+                pieces= new Piece[]{new Piece(40),new Piece(41),new Piece(42),new Piece(43)};
+                break;
+            default:
+                ;
+        }
     }
 
     public int GetLoopStart() {
@@ -23,16 +39,16 @@ public class Player {
         }
     }
 //
-//    public boolean IsWinner() {
-//        for (int i = 0; i < pieces.length; i++) {
-//            if (!pieces[i].IsFinish()) {
-//                //At least one piece is not in the finish position
-//                return false;
-//            }
-//        }
-//        //All pieces are in the Finish
-//        return true;
-//    }
+    public boolean IsWinner() {
+        for (int i = 0; i < pieces.length; i++) {
+            if (!pieces[i].IsFinish()) {
+                //At least one piece is not in the finish position
+                return false;
+            }
+        }
+        //All pieces are in the Finish
+        return true;
+    }
 
     public boolean AnyPiecesHome() {
 
