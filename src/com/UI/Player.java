@@ -21,10 +21,11 @@ public class Player {
                 break;
             default:
                 ;
-        }
+    }
     }
 
     public int GetLoopStart() {
+        System.out.println("Player:GetLoopStart");
         switch (this.color) {
             case RED:
                 return 0;
@@ -39,19 +40,19 @@ public class Player {
         }
     }
 //
-    public boolean IsWinner() {
-        for (int i = 0; i < pieces.length; i++) {
-            if (!pieces[i].IsFinish()) {
-                //At least one piece is not in the finish position
-                return false;
-            }
-        }
-        //All pieces are in the Finish
-        return true;
-    }
+//    public boolean IsWinner() {
+//        for (int i = 0; i < pieces.length; i++) {
+//            if (!pieces[i].IsFinish()) {
+//                //At least one piece is not in the finish position
+//                return false;
+//            }
+//        }
+//        //All pieces are in the Finish
+//        return true;
+//    }
 
     public boolean AnyPiecesHome() {
-
+        System.out.println("Player:Any Pieces Home");
         for (int i = 0; i < pieces.length; i++) {
             if (!pieces[i].IsHome()) {
                 //At least one piece is in the home position
@@ -62,6 +63,7 @@ public class Player {
         return false;
     }
     public void MovePieceToPlayerStart(){
+        System.out.println("Player: Move piece to Player start");
         int maxPos = 0;
         int piece = 0;
         //Find max piece in home
