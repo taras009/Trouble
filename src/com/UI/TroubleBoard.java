@@ -96,6 +96,7 @@ public class TroubleBoard {
         piece2.addActionListener(bb);
         piece3.addActionListener(bb);
         piece4.addActionListener(bb);
+        buttonControl(false,false,false,false);
 
 
         //    resetButton.addActionListener(new ResetButtonListener());
@@ -109,9 +110,7 @@ public class TroubleBoard {
         piece4.setEnabled(d);
     }
 
-    public boolean isMoreThanOneMove() {
-        return true;
-    }
+
 
     public void isWinner() {
         if (drawPanel.redI[0] == -10 && drawPanel.redI[1] == -10 && drawPanel.redI[2] == -10 && drawPanel.redI[2] == -10) {
@@ -135,7 +134,15 @@ public class TroubleBoard {
         }
     }
 
-
+    public int MovesAvailable() {
+        int count = 0;
+        for (int i = 0; i < 4; i++) {
+            if(drawPanel.HasMove(i,drawPanel.diceNumber)){
+                count++;
+            }
+        }
+        return count;
+    }
     class ButtonListener implements ActionListener { //*** inner class for clicks
 
         @Override
@@ -143,41 +150,46 @@ public class TroubleBoard {
             System.out.println("dice rolling");
             if (e.getSource() == button) {
                 drawPanel.diceNumber = popOMatic.Roll();
-                if (isMoreThanOneMove()) {
+
+
+                if (MovesAvailable()>1) {
                     button.setEnabled(false);
-                    buttonControl(true, true, true, true);
+                    buttonControl(drawPanel.HasMove(0,drawPanel.diceNumber), drawPanel.HasMove(1,drawPanel.diceNumber),
+                            drawPanel.HasMove(2,drawPanel.diceNumber), drawPanel.HasMove(3,drawPanel.diceNumber));
                 }
                 else{
-
+                    //auto move
+                    if(MovesAvailable() == 1){
+                        for (int i = 0; i < 4; i++) {
+                            if(drawPanel.HasMove(i,drawPanel.diceNumber)){
+                                drawPanel.move(drawPanel.diceNumber, i);
+                            }
+                        }
+                    }
+                    //if no moves, go to next player
+                    else{
+                        drawPanel.updateChanceToPlay();
+                    }
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
 
-            } else {
+            } else if(e.getSource() == piece1 ||e.getSource() == piece2 ||e.getSource() == piece3 ||e.getSource() == piece4 ) {
                 if (e.getSource() == piece1) {
                     drawPanel.move(drawPanel.diceNumber, 0);
-                    button.setEnabled(true);
-                    buttonControl(false, false, false, false);
-                    button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece2) {
                     drawPanel.move(drawPanel.diceNumber, 1);
-                    button.setEnabled(true);
-                    buttonControl(false, false, false, false);
-
-                    button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece3) {
                     drawPanel.move(drawPanel.diceNumber, 2);
-                    button.setEnabled(true);
-                    buttonControl(false, false, false, false);
-                    button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece4) {
                     drawPanel.move(drawPanel.diceNumber, 3);
-                    button.setEnabled(true);
-                    buttonControl(false, false, false, false);
-                    button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
+                button.setEnabled(true);
+                buttonControl(false, false, false, false);
+                button.setText("MOVE--> " + drawPanel.chanceToPlay);
+            }else{
                 isWinner();
             }
             frame.repaint();

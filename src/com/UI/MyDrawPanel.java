@@ -338,7 +338,30 @@ public class MyDrawPanel extends JPanel {
         }
 
     }
+    public boolean HasMove(int pieceId,int diceNum){
 
+        switch (chanceToPlay) {
+            case "red":
+                if (isRedInPlay[pieceId] == true || diceNum == 6)
+                    return true;
+                break;
+            case "blue":
+                if (isBlueInPlay[pieceId] == true || diceNum == 6)
+                    return true;
+                break;
+            case "yellow":
+                if (isYellowInPlay[pieceId] == true || diceNum == 6)
+                    return true;
+                break;
+            case "green":
+                if (isGreenInPlay[pieceId] == true || diceNum == 6)
+                    return true;
+                break;
+            default:
+                ;
+        }
+        return false;
+    }
 
     public void move(int diceNumber, int pieceId) {
         System.out.println("PieceID:" + pieceId);
