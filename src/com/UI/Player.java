@@ -20,8 +20,7 @@ public class Player {
                 pieces= new Piece[]{new Piece(40),new Piece(41),new Piece(42),new Piece(43)};
                 break;
             default:
-                ;
-    }
+        }
     }
 
     public int GetLoopStart() {

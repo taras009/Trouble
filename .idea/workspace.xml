@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a8c88d2-b233-47ef-b9b3-cf878e60cb4d" name="Default" comment="Fixed move() method">
-      <change beforePath="$PROJECT_DIR$/out/production/cs474trouble/com/UI/TroubleBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs474trouble/com/UI/TroubleBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs474trouble/com/UI/TroubleBoard.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/OurColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/OurColor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/UI/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/Pieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/Pieces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/UI/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/UI/PopOMatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/PopOMatic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/UI/TroubleBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/TroubleBoard.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,32 +17,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/com/UI/Board.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="221">
-                    <caret line="13" column="26" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="30" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Trouble$TroubleBoard.ic" NAME="TroubleBoard Coverage Results" MODIFIED="1523929315690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.UI.*</FILTER>
+    </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="TroubleBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="289">
+              <caret line="147" column="32" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#TroubleBoard#0" />
+                <element signature="method#createBoard#0;class#TroubleBoard#0" />
+                <element signature="method#isWinner#0;class#TroubleBoard#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,17 +42,17 @@
       <file leaf-file-name="Pieces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyDrawPanel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyDrawPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2244">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="299">
+              <caret line="476" column="3" selection-start-line="476" selection-start-column="3" selection-end-line="476" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +60,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/UI/Piece.java">
+      <file leaf-file-name="ImageIcon.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="2958">
+              <caret line="216" selection-start-line="216" selection-end-line="216" />
+              <folding>
+                <element signature="e#6742#6743#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +75,26 @@
       <file leaf-file-name="PopOMatic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/PopOMatic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/UI/Piece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/UI/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -98,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="197">
+              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -117,6 +127,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;MOVE--&gt; &quot;</find>
+      <find>base</find>
+      <find>piecesOrder</find>
+      <find>level</find>
+      <find>13</find>
+      <find>Base Piece ka</find>
+      <find>Base Piece</find>
+      <find>6</find>
+      <find>diceNumber</find>
+      <find>MyDrawPanel</find>
+      <find>MOVE--&gt;</find>
+      <find>buttonControl</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -129,11 +155,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/UI/TroubleBoard.form" />
         <option value="$PROJECT_DIR$/src/com/UI/Pieces.java" />
-        <option value="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/UI/Board.java" />
-        <option value="$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
         <option value="$PROJECT_DIR$/src/com/UI/Piece.java" />
         <option value="$PROJECT_DIR$/src/com/UI/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/UI/Board.java" />
+        <option value="$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
+        <option value="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" />
       </list>
     </option>
   </component>
@@ -144,8 +170,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="398" />
-    <option name="y" value="-14" />
+    <option name="x" value="557" />
+    <option name="y" value="-12" />
     <option name="width" value="611" />
     <option name="height" value="888" />
   </component>
@@ -154,25 +180,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Trouble" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cs474trouble(rishi)" type="462c0819:PsiDirectoryNode" />
+              <item name="cs474trouble" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Trouble" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cs474trouble(rishi)" type="462c0819:PsiDirectoryNode" />
+              <item name="cs474trouble" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Trouble" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs474trouble" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Trouble" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cs474trouble(rishi)" type="462c0819:PsiDirectoryNode" />
+              <item name="cs474trouble" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Trouble" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs474trouble" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Pieces.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -185,9 +223,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -376,6 +415,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -388,6 +428,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="6" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2640625" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -395,14 +436,15 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3291536" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,18 +491,38 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java</url>
-          <line>32</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/UI/Board.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java</url>
+          <line>100</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java</url>
+          <line>142</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java</url>
+          <line>110</line>
+          <properties class="com.UI.TroubleBoard" method="isAnyMove">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -468,55 +530,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/UI/OurColor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="3128">
+          <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="3672">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+          <folding>
+            <element signature="e#6742#6743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/PopOMatic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -527,24 +585,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
@@ -574,16 +621,40 @@
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java" />
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.form" />
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoardTest.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1575" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.form" />
     <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/java/awt/Graphics.java" />
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="jar://C:/Program Files/Java/jdk-9/lib/src.zip!/java.desktop/javax/swing/JComponent.java" />
-    <entry file="file://$PROJECT_DIR$/test_src/com/UI/TroubleBoardTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/UI/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="123" column="10" lean-forward="true" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11804" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_src/com/UI/TroubleBoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/javax/swing/ImageIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2958">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+          <folding>
+            <element signature="e#6742#6743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/OurColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -591,62 +662,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/PopOMatic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="187">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="197">
+          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/PopOMatic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="3350" column="16" selection-start-line="3350" selection-start-column="16" selection-end-line="3350" selection-end-column="16" />
+          <folding>
+            <element signature="e#115028#115029#0" expanded="true" />
+            <element signature="e#115075#115076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="147" column="32" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#TroubleBoard#0" />
+            <element signature="method#createBoard#0;class#TroubleBoard#0" />
+            <element signature="method#isWinner#0;class#TroubleBoard#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="476" column="3" selection-start-line="476" selection-start-column="3" selection-end-line="476" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,7 +771,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
