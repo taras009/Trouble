@@ -102,15 +102,17 @@ public class TroubleBoard {
 
     }
 
-    public void buttonControl(boolean a,boolean b,boolean c, boolean d) {
+    public void buttonControl(boolean a, boolean b, boolean c, boolean d) {
         piece1.setEnabled(a);
         piece2.setEnabled(b);
         piece3.setEnabled(c);
         piece4.setEnabled(d);
     }
-    public void isMoreThanOneMove(){
 
+    public boolean isMoreThanOneMove() {
+        return true;
     }
+
     public void isWinner() {
         if (drawPanel.redI[0] == -10 && drawPanel.redI[1] == -10 && drawPanel.redI[2] == -10 && drawPanel.redI[2] == -10) {
             position++;
@@ -141,32 +143,39 @@ public class TroubleBoard {
             System.out.println("dice rolling");
             if (e.getSource() == button) {
                 drawPanel.diceNumber = popOMatic.Roll();
-                button.setEnabled(false);
-                buttonControl(true,true,true,true);
+                if (isMoreThanOneMove()) {
+                    button.setEnabled(false);
+                    buttonControl(true, true, true, true);
+                }
+                else{
+
+                    button.setText("MOVE--> " + drawPanel.chanceToPlay);
+                }
+
             } else {
                 if (e.getSource() == piece1) {
                     drawPanel.move(drawPanel.diceNumber, 0);
                     button.setEnabled(true);
-                    buttonControl(false,false,false,false);
+                    buttonControl(false, false, false, false);
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece2) {
                     drawPanel.move(drawPanel.diceNumber, 1);
                     button.setEnabled(true);
-                    buttonControl(false,false,false,false);
+                    buttonControl(false, false, false, false);
 
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece3) {
                     drawPanel.move(drawPanel.diceNumber, 2);
                     button.setEnabled(true);
-                    buttonControl(false,false,false,false);
+                    buttonControl(false, false, false, false);
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 if (e.getSource() == piece4) {
                     drawPanel.move(drawPanel.diceNumber, 3);
                     button.setEnabled(true);
-                    buttonControl(false,false,false,false);
+                    buttonControl(false, false, false, false);
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
                 isWinner();

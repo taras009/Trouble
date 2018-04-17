@@ -315,21 +315,28 @@ public class MyDrawPanel extends JPanel {
 
     public void updateChanceToPlay() {
         System.out.println(chanceToPlay);
-        if (chanceToPlay.equals("red")) {
-            chanceToPlay = "blue";
-        } else {
-            if (chanceToPlay.equals("blue")) {
-                chanceToPlay = "yellow";
-            } else {
-                if (chanceToPlay.equals("yellow")) {
-                    chanceToPlay = "green";
-                } else {
-                    if (chanceToPlay.equals("green")) {
-                        chanceToPlay = "red";
-                    } else if (chanceToPlay.equals("")) chanceToPlay = "red";
-                }
-            }
+        if(diceNumber == 6)
+        {
+            //do nothing. Player has another turn
+            return;
         }
+        switch (chanceToPlay) {
+            case "red":
+                chanceToPlay = "blue";
+                break;
+            case "blue":
+                chanceToPlay = "yellow";
+                break;
+            case "yellow":
+                chanceToPlay = "green";
+                break;
+            case "green":
+                chanceToPlay = "red";
+                break;
+            default:
+                ;
+        }
+
     }
 
 
