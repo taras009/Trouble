@@ -37,14 +37,14 @@ public class MyDrawPanel extends JPanel {
     public int y = 0;
 
     private String level =
-            "#####&&&#####\n"
+                        "#####&&&#####\n"
                     + "#$$##&B&##$$#\n"
                     + "#$$##&B&##$$#\n"
                     + "#####&B&#####\n"
                     + "#####&B&#####\n"
-                    + "&&&&&&B&&&&&&\n"
-                    + "&RRRRR#YYYYY&\n"
-                    + "&&&&&&G&&&&&&\n"
+                    + "&&&&&&#&&&&&&\n"
+                    + "&RRRR###YYYY&\n"
+                    + "&&&&&&#&&&&&&\n"
                     + "#####&G&#####\n"
                     + "#####&G&#####\n"
                     + "#$$##&G&##$$#\n"
@@ -54,7 +54,7 @@ public class MyDrawPanel extends JPanel {
       int[] piecesOrder = {1, 2, 3, 48, 4, 47, 5, 46, 6, 45, 7, 39, 40, 41, 42, 43, 44,
               8, 9, 10, 11, 12, 13, 38, 14, 37, 36, 35, 34, 33, 32, 20,
               19, 18, 17, 16, 15, 31, 21, 30, 22, 29, 23, 28, 24, 27, 26, 25};
-      
+
 //      int[] redPath=  {10,11,12,9,13,8,14,7,15,6,16,1,2,3,4,5,17,18,19,20,21,22,47,48,49,50,51,52,53,23,46,45,44,43,42,41,29,28,27,26,25,24,40,30,39,31,38,32,37,33,36,35,34};
 
 
@@ -288,7 +288,7 @@ isYellowInPlay[x]=false;
         System.out.println("MyDrawPanel:buildWorld\n");
         evaluateBasePieces();
         for (int i = 0; i < allPieces.size(); i++) {
-            Pieces item = (Pieces) allPieces.get(i);
+            Pieces item = allPieces.get(i);
             g.drawImage(item.getImage(), item.x(), item.y(), this);
         }
         g.fillRect(300,300,50,50);
