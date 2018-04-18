@@ -99,7 +99,7 @@ public class TroubleBoard {
         buttonControl(false,false,false,false);
 
 
-        //    resetButton.addActionListener(new ResetButtonListener());
+        resetButton.addActionListener(new ResetButtonListener());
 
     }
 
@@ -200,6 +200,7 @@ public class TroubleBoard {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            frame.dispose();
             Board board = new Board();
             try {
                 new TroubleBoard().createBoard();
