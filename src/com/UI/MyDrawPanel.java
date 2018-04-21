@@ -15,7 +15,7 @@ public class MyDrawPanel extends JPanel {
     public int blueI[] = {-1, -1, -1, -1};
     public int greenI[] = {-1, -1, -1, -1};
     public int yellowI[] = {-1, -1, -1, -1};
-    public String chanceToPlay = "red";
+    public OurColor chanceToPlay = OurColor.RED;
     public int index = 1;
     public boolean isRedInPlay[] = {false, false, false, false};
     public boolean isBlueInPlay[] = {false, false, false, false};
@@ -35,12 +35,10 @@ public class MyDrawPanel extends JPanel {
     private ArrayList<Pieces> allPieces = new ArrayList<Pieces>();
     private ArrayList<MovePiece> movePieces = new ArrayList<MovePiece>();
     private ArrayList<BasePiece> basePieces = new ArrayList<BasePiece>();
-    private ArrayList<RedMovePiece> redMovePieces = new ArrayList<RedMovePiece>();
-    private ArrayList<BlueMovePiece> blueMovePieces = new ArrayList<BlueMovePiece>();
-    private ArrayList<YellowMovePiece> yellowMovePieces = new ArrayList<YellowMovePiece>();
-
-//      int[] redPath=  {10,11,12,9,13,8,14,7,15,6,16,1,2,3,4,5,17,18,19,20,21,22,47,48,49,50,51,52,53,23,46,45,44,43,42,41,29,28,27,26,25,24,40,30,39,31,38,32,37,33,36,35,34};
-    private ArrayList<GreenMovePiece> greenMovePieces = new ArrayList<GreenMovePiece>();
+    private ArrayList<MovePiece> redMovePieces = new ArrayList<MovePiece>();
+    private ArrayList<MovePiece> blueMovePieces = new ArrayList<MovePiece>();
+    private ArrayList<MovePiece> yellowMovePieces = new ArrayList<MovePiece>();
+    private ArrayList<MovePiece> greenMovePieces = new ArrayList<MovePiece>();
     private String level =
             "#####&&&#####\n"
                     + "#$$##&B&##$$#\n"
@@ -69,10 +67,10 @@ public class MyDrawPanel extends JPanel {
         BoardPiece boardPiece;
         MovePiece movePiece;
         BasePiece basePiece;
-        RedMovePiece redMovePiece;
-        BlueMovePiece blueMovePiece;
-        YellowMovePiece yellowMovePiece;
-        GreenMovePiece greenMovePiece;
+        MovePiece redMovePiece;
+        MovePiece blueMovePiece;
+        MovePiece yellowMovePiece;
+        MovePiece greenMovePiece;
         int ii = 0;
         int rii = 0;
         int bii = 0;
@@ -90,7 +88,7 @@ public class MyDrawPanel extends JPanel {
                 allPieces.add(boardPiece);
                 x += SPACE;
             } else if (item == '&') {
-                movePiece = new MovePiece(x, y);
+                movePiece = new MovePiece(x, y, OurColor.NONE);
                 movePiece.setIndex(piecesOrder[ii]);
                 ii++;
                 allPieces.add(movePiece);
@@ -105,28 +103,28 @@ public class MyDrawPanel extends JPanel {
                 basePieces.add(basePiece);
                 x += SPACE;
             } else if (item == 'R') {
-                redMovePiece = new RedMovePiece(x, y);
+                redMovePiece = new MovePiece(x, y, OurColor.RED);
                 redMovePiece.setIndex(rii);
                 rii++;
                 allPieces.add(redMovePiece);
                 redMovePieces.add(redMovePiece);
                 x += SPACE;
             } else if (item == 'B') {
-                blueMovePiece = new BlueMovePiece(x, y);
+                blueMovePiece = new MovePiece(x, y, OurColor.BLUE);
                 blueMovePiece.setIndex(bii);
                 bii++;
                 allPieces.add(blueMovePiece);
                 blueMovePieces.add(blueMovePiece);
                 x += SPACE;
             } else if (item == 'Y') {
-                yellowMovePiece = new YellowMovePiece(x, y);
+                yellowMovePiece = new MovePiece(x, y, OurColor.YELLOW);
                 yellowMovePiece.setIndex(yii);
                 yii++;
                 allPieces.add(yellowMovePiece);
                 yellowMovePieces.add(yellowMovePiece);
                 x += SPACE;
             } else if (item == 'G') {
-                greenMovePiece = new GreenMovePiece(x, y);
+                greenMovePiece = new MovePiece(x, y, OurColor.GREEN);
                 greenMovePiece.setIndex(gii);
                 gii++;
                 allPieces.add(greenMovePiece);
@@ -137,7 +135,7 @@ public class MyDrawPanel extends JPanel {
 
         }
         Collections.sort(movePieces);
-        // chanceToPlay="red";
+
     }
 
 
@@ -315,45 +313,45 @@ public class MyDrawPanel extends JPanel {
 
     public void updateChanceToPlay() {
         System.out.println(chanceToPlay);
-        if(diceNumber == 6)
-        {
+        if (diceNumber == 6) {
             //do nothing. Player has another turn
             return;
         }
         switch (chanceToPlay) {
-            case "red":
-                chanceToPlay = "blue";
+            case RED:
+                chanceToPlay = OurColor.BLUE;
                 break;
-            case "blue":
-                chanceToPlay = "yellow";
+            case BLUE:
+                chanceToPlay = OurColor.YELLOW;
                 break;
-            case "yellow":
-                chanceToPlay = "green";
+            case YELLOW:
+                chanceToPlay = OurColor.GREEN;
                 break;
-            case "green":
-                chanceToPlay = "red";
+            case GREEN:
+                chanceToPlay = OurColor.RED;
                 break;
             default:
                 ;
         }
 
     }
-    public boolean HasMove(int pieceId,int diceNum){
+
+    public boolean HasMove(int pieceId, int diceNum) {
 
         switch (chanceToPlay) {
-            case "red":
+            case RED:
                 if (isRedInPlay[pieceId] == true || diceNum == 6)
                     return true;
                 break;
-            case "blue":
+            case BLUE:
                 if (isBlueInPlay[pieceId] == true || diceNum == 6)
                     return true;
                 break;
-            case "yellow":
+            case YELLOW:
                 if (isYellowInPlay[pieceId] == true || diceNum == 6)
                     return true;
                 break;
-            case "green":
+            case GREEN:
                 if (isGreenInPlay[pieceId] == true || diceNum == 6)
                     return true;
                 break;
@@ -366,7 +364,7 @@ public class MyDrawPanel extends JPanel {
     public void move(int diceNumber, int pieceId) {
         System.out.println("PieceID:" + pieceId);
         int temp = 0;
-        if (chanceToPlay.equals("red")) {
+        if (chanceToPlay == OurColor.RED) {
             if (redI[pieceId] == -10) {
                 updateChanceToPlay();
                 return;
@@ -408,7 +406,7 @@ public class MyDrawPanel extends JPanel {
             }
 
         } else {
-            if (chanceToPlay.equals("blue")) {
+            if (chanceToPlay == OurColor.BLUE) {
                 System.out.println(blueI[pieceId]);
                 if (blueI[pieceId] == -10) {
                     updateChanceToPlay();
@@ -451,7 +449,7 @@ public class MyDrawPanel extends JPanel {
                     repaint();
                 }
             } else {
-                if (chanceToPlay.equals("yellow")) {
+                if (chanceToPlay == OurColor.YELLOW) {
                     System.out.println(yellowI[pieceId]);
                     if (yellowI[pieceId] == -10) {
                         updateChanceToPlay();
@@ -508,7 +506,7 @@ public class MyDrawPanel extends JPanel {
 
                     repaint();
                 } else {
-                    if (chanceToPlay.equals("green")) {
+                    if (chanceToPlay == OurColor.GREEN) {
                         if (greenI[pieceId] == -10) {
                             updateChanceToPlay();
                             return;

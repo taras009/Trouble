@@ -1,10 +1,10 @@
 package com.UI;
 
 import javax.swing.*;
-import java.awt.Image;
+import java.awt.*;
 import java.net.URL;
 
-public class Pieces implements Comparable{
+public class Pieces implements Comparable {
 
     private int x;
     private int y;
@@ -17,8 +17,6 @@ public class Pieces implements Comparable{
         this.x = x;
         this.y = y;
     }
-
-
 
     public Image getImage() {
         return this.image;
@@ -50,91 +48,36 @@ public class Pieces implements Comparable{
         return (Integer.compare(this.getIndex(), ((Pieces) o).getIndex()));
     }
 }
+
 class MovePiece extends Pieces {
-    
+
     private Image image;
 
-    public MovePiece(int x, int y) {
+    public MovePiece(int x, int y,OurColor color) {
         super(x, y);
-        URL loc = this.getClass().getResource("images/moving_piece.png");
+        URL loc;
+        switch (color) {
+            case RED:
+                loc = this.getClass().getResource("images/red_move.png64");
+                break;
+            case GREEN:
+                loc = this.getClass().getResource("images/green_move.png64");
+                break;
+            case YELLOW:
+                loc = this.getClass().getResource("images/yellow_move.png64");
+                break;
+            case BLUE:
+                loc = this.getClass().getResource("images/blue_move.png64");
+                break;
+            default:
+                loc = this.getClass().getResource("images/moving_piece.png");
+        }
         ImageIcon iia = new ImageIcon(loc);
         image = iia.getImage();
         this.setImage(image);
 
     }
 }
-
-
-
-
-class RedMovePiece extends Pieces
-{
-private Image image;
-
-    public RedMovePiece(int x, int y) {
-        super(x, y);
-        URL loc = this.getClass().getResource("images/red_move.png64");
-        ImageIcon iia = new ImageIcon(loc);
-        image = iia.getImage();
-        this.setImage(image);
-
-    }
-
-
-}
-class BlueMovePiece extends Pieces
-{
-private Image image;
-
-    public BlueMovePiece(int x, int y) {
-        super(x, y);
-        URL loc = this.getClass().getResource("images/blue_move.png64");
-        ImageIcon iia = new ImageIcon(loc);
-        image = iia.getImage();
-        this.setImage(image);
-
-    }
-
-
-}
-class YellowMovePiece extends Pieces
-{
-private Image image;
-
-    public YellowMovePiece(int x, int y) {
-        super(x, y);
-        URL loc = this.getClass().getResource("images/yellow_move.png64");
-        ImageIcon iia = new ImageIcon(loc);
-        image = iia.getImage();
-        this.setImage(image);
-
-    }
-
-
-}
-class GreenMovePiece extends Pieces
-{
-private Image image;
-
-    public GreenMovePiece(int x, int y) {
-        super(x, y);
-        URL loc = this.getClass().getResource("images/green_move.png64");
-        ImageIcon iia = new ImageIcon(loc);
-        image = iia.getImage();
-        this.setImage(image);
-
-    }
-
-
-}
-
-
-
-
-
-
-
-
 
 class BoardPiece extends Pieces {
 
@@ -142,7 +85,7 @@ class BoardPiece extends Pieces {
 
     public BoardPiece(int x, int y) {
         super(x, y);
-        System.out.println("Board Piece ka constructor");        
+        System.out.println("Board Piece ka constructor");
         URL loc = this.getClass().getResource("images/board_piece.png");
         ImageIcon iia = new ImageIcon(loc);
         image = iia.getImage();
@@ -154,34 +97,24 @@ class BoardPiece extends Pieces {
 class BasePiece extends Pieces {
 
     private Image image;
+
     public BasePiece(int x, int y) {
         super(x, y);
-        URL loc=null;
-        System.out.println("Base Piece ka constructor"+x+" "+y);
-        if(x<=100 && y<=100)
-        {  
-          loc = this.getClass().getResource("images/red.png64"); 
-        }else{ 
-            if(x<=100 && y>=500)
-            { 
-             loc = this.getClass().getResource("images/green.png64");
-            }      
-            else
-            { 
-              if(x>100 && y<=100) 
-              { 
-               loc = this.getClass().getResource("images/blue.png64"); 
-              }     
-              else
-              { 
-               if(x>100 && y>=500) { loc = this.getClass().getResource("images/yellow.png64"); }
-               }
-              }
-             } 
+        URL loc = null;
+        System.out.println("Base Piece ka constructor" + x + " " + y);
+        if (x <= 100 && y <= 100) {
+            loc = this.getClass().getResource("images/red.png64");
+        } else if (x <= 100 && y >= 500) {
+            loc = this.getClass().getResource("images/green.png64");
+        } else if (x > 100 && y <= 100) {
+            loc = this.getClass().getResource("images/blue.png64");
+        } else if (x > 100 && y >= 500) {
+            loc = this.getClass().getResource("images/yellow.png64");
+        }
         ImageIcon iia = new ImageIcon(loc);
         image = iia.getImage();
-        
+
         this.setImage(image);
-     
+
     }
 }

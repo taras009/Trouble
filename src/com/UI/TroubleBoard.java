@@ -24,33 +24,8 @@ public class TroubleBoard {
 
     public static void main(String[] args) throws IOException {
         //initiate board
-        Board board = new Board();
+        //Board board = new Board();
 
-
-        // initiate player rotation
-
-
-        //begin plyer turns
-//        while (!board.AnyWinners())
-//        {
-//            for (int i = 0; i <board.players.length ; i++) {
-//                int roll = 0;
-//                do {
-//                    roll = board.die.Roll();
-//                    //Turn stuff here
-//
-//
-//
-//
-//                }while(roll == 6);
-//
-//            }
-//        }
-
-        //display winner message
-
-
-        //integrate with board
 
         new TroubleBoard().createBoard();
     }
@@ -96,7 +71,7 @@ public class TroubleBoard {
         piece2.addActionListener(bb);
         piece3.addActionListener(bb);
         piece4.addActionListener(bb);
-        buttonControl(false,false,false,false);
+        buttonControl(false, false, false, false);
 
 
         resetButton.addActionListener(new ResetButtonListener());
@@ -109,7 +84,6 @@ public class TroubleBoard {
         piece3.setEnabled(c);
         piece4.setEnabled(d);
     }
-
 
 
     public void isWinner() {
@@ -134,15 +108,17 @@ public class TroubleBoard {
         }
     }
 
+    //checks if there are any moves available
     public int MovesAvailable() {
         int count = 0;
         for (int i = 0; i < 4; i++) {
-            if(drawPanel.HasMove(i,drawPanel.diceNumber)){
+            if (drawPanel.HasMove(i, drawPanel.diceNumber)) {
                 count++;
             }
         }
         return count;
     }
+
     class ButtonListener implements ActionListener { //*** inner class for clicks
 
         @Override
@@ -152,28 +128,27 @@ public class TroubleBoard {
                 drawPanel.diceNumber = popOMatic.Roll();
 
 
-                if (MovesAvailable()>1) {
+                if (MovesAvailable() > 1) {
                     button.setEnabled(false);
-                    buttonControl(drawPanel.HasMove(0,drawPanel.diceNumber), drawPanel.HasMove(1,drawPanel.diceNumber),
-                            drawPanel.HasMove(2,drawPanel.diceNumber), drawPanel.HasMove(3,drawPanel.diceNumber));
-                }
-                else{
+                    buttonControl(drawPanel.HasMove(0, drawPanel.diceNumber), drawPanel.HasMove(1, drawPanel.diceNumber),
+                            drawPanel.HasMove(2, drawPanel.diceNumber), drawPanel.HasMove(3, drawPanel.diceNumber));
+                } else {
                     //auto move
-                    if(MovesAvailable() == 1){
+                    if (MovesAvailable() == 1) {
                         for (int i = 0; i < 4; i++) {
-                            if(drawPanel.HasMove(i,drawPanel.diceNumber)){
+                            if (drawPanel.HasMove(i, drawPanel.diceNumber)) {
                                 drawPanel.move(drawPanel.diceNumber, i);
                             }
                         }
                     }
                     //if no moves, go to next player
-                    else{
+                    else {
                         drawPanel.updateChanceToPlay();
                     }
                     button.setText("MOVE--> " + drawPanel.chanceToPlay);
                 }
 
-            } else if(e.getSource() == piece1 ||e.getSource() == piece2 ||e.getSource() == piece3 ||e.getSource() == piece4 ) {
+            } else if (e.getSource() == piece1 || e.getSource() == piece2 || e.getSource() == piece3 || e.getSource() == piece4) {
                 if (e.getSource() == piece1) {
                     drawPanel.move(drawPanel.diceNumber, 0);
                 }
@@ -189,19 +164,20 @@ public class TroubleBoard {
                 button.setEnabled(true);
                 buttonControl(false, false, false, false);
                 button.setText("MOVE--> " + drawPanel.chanceToPlay);
-            }else{
+            } else {
                 isWinner();
             }
             frame.repaint();
         }
     }// close ButtonListener
 
+    // restart game
     class ResetButtonListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
-            Board board = new Board();
+            //Board board = new Board();
             try {
                 new TroubleBoard().createBoard();
             } catch (IOException ee) {
