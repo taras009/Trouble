@@ -13,7 +13,7 @@ public class Pieces implements Comparable {
     private int index;
 
     public Pieces(int x, int y) {
-        System.out.println("Pieces ka constructor");
+        System.out.println("constructor for Pieces");
         this.x = x;
         this.y = y;
     }
@@ -85,7 +85,7 @@ class BoardPiece extends Pieces {
 
     public BoardPiece(int x, int y) {
         super(x, y);
-        System.out.println("Board Piece ka constructor");
+        System.out.println("constructor for Board Piece");
         URL loc = this.getClass().getResource("images/board_piece.png");
         ImageIcon iia = new ImageIcon(loc);
         image = iia.getImage();
