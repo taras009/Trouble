@@ -2,6 +2,7 @@ package com.UI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -139,51 +140,22 @@ public class MyDrawPanel extends JPanel {
     }
 
 
-    public void attackByRed(int iii) {
-        for (int x = 0; x < 4; x++) {
-            if (blueI[x] == iii && blueRoundDone[x] == false) {
-                blueI[x] = -1;
-                isBlueInPlay[x] = false;
-            }
-            if (yellowI[x] == iii && yellowRoundDone[x] == false) {
-                yellowI[x] = -1;
-                isYellowInPlay[x] = false;
-            }
-            if (greenI[x] == iii && greenRoundDone[x] == false) {
-                greenI[x] = -1;
-                isGreenInPlay[x] = false;
-            }
-        }
-    }
 
-    public void attackByBlue(int iii) {
+    public void attack(int iii,OurColor color) {
         for (int x = 0; x < 4; x++) {
-            if (redI[x] == iii && redRoundDone[x] == false) {
+            if (color != OurColor.RED && redI[x] == iii && redRoundDone[x] == false) {
                 redI[x] = -1;
                 isRedInPlay[x] = false;
             }
-            if (yellowI[x] == iii && yellowRoundDone[x] == false) {
-                yellowI[x] = -1;
-                isYellowInPlay[x] = false;
-            }
-            if (greenI[x] == iii && greenRoundDone[x] == false) {
-                greenI[x] = -1;
-                isGreenInPlay[x] = false;
-            }
-        }
-    }
-
-    public void attackByYellow(int iii) {
-        for (int x = 0; x < 4; x++) {
-            if (redI[x] == iii && redRoundDone[x] == false) {
-                redI[x] = -1;
-                isRedInPlay[x] = false;
-            }
-            if (blueI[x] == iii && blueRoundDone[x] == false) {
+            if (color != OurColor.BLUE && blueI[x] == iii && blueRoundDone[x] == false) {
                 blueI[x] = -1;
                 isBlueInPlay[x] = false;
             }
-            if (greenI[x] == iii && greenRoundDone[x] == false) {
+            if (color != OurColor.YELLOW && yellowI[x] == iii && yellowRoundDone[x] == false) {
+                yellowI[x] = -1;
+                isYellowInPlay[x] = false;
+            }
+            if (color != OurColor.GREEN && greenI[x] == iii && greenRoundDone[x] == false) {
                 greenI[x] = -1;
                 isGreenInPlay[x] = false;
             }
@@ -191,22 +163,6 @@ public class MyDrawPanel extends JPanel {
     }
 
 
-    public void attackByGreen(int iii) {
-        for (int x = 0; x < 4; x++) {
-            if (redI[x] == iii && redRoundDone[x] == false) {
-                redI[x] = -1;
-                isRedInPlay[x] = false;
-            }
-            if (blueI[x] == iii && blueRoundDone[x] == false) {
-                blueI[x] = -1;
-                isBlueInPlay[x] = false;
-            }
-            if (yellowI[x] == iii && yellowRoundDone[x] == false) {
-                yellowI[x] = -1;
-                isYellowInPlay[x] = false;
-            }
-        }
-    }
 
     public void evaluateBasePieces() {
 
@@ -283,21 +239,21 @@ public class MyDrawPanel extends JPanel {
                 image = new ImageIcon(this.getClass().getResource("images/red" + i + ".png64")).getImage();
                 if (!redRoundDone[i]) {
                     g.drawImage(image, movePieces.get(redI[i]).x(), movePieces.get(redI[i]).y(), this);
-                    attackByRed(redI[i]);
+                    attack(redI[i],OurColor.RED);
                 } else g.drawImage(image, redMovePieces.get(redI[i]).x(), redMovePieces.get(redI[i]).y(), this);
             }
             if (blueI[i] != -1 && blueI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/blue" + i + ".png64")).getImage();
                 if (!blueRoundDone[i]) {
                     g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(), this);
-                    attackByBlue(blueI[i]);
+                    attack(blueI[i],OurColor.BLUE);
                 } else g.drawImage(image, blueMovePieces.get(blueI[i]).x(), blueMovePieces.get(blueI[i]).y(), this);
             }
             if (yellowI[i] != -1 && yellowI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/yellow" + i + ".png64")).getImage();
                 if (!yellowRoundDone[i]) {
                     g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(), this);
-                    attackByYellow(yellowI[i]);
+                    attack(yellowI[i],OurColor.YELLOW);
                 } else
                     g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(), this);
             }
@@ -305,7 +261,7 @@ public class MyDrawPanel extends JPanel {
                 image = new ImageIcon(this.getClass().getResource("images/green" + i + ".png64")).getImage();
                 if (!greenRoundDone[i]) {
                     g.drawImage(image, movePieces.get(greenI[i]).x(), movePieces.get(greenI[i]).y(), this);
-                    attackByGreen(greenI[i]);
+                    attack(greenI[i],OurColor.GREEN);
                 } else g.drawImage(image, greenMovePieces.get(greenI[i]).x(), greenMovePieces.get(greenI[i]).y(), this);
             }
         }
