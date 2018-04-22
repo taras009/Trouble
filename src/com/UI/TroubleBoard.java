@@ -14,10 +14,10 @@ public class TroubleBoard {
     int position = 0;
     private JPanel buttonPanel;
     private JButton button;
-    private JButton piece1;
-    private JButton piece2;
-    private JButton piece3;
-    private JButton piece4;
+    public JButton piece1;
+    public JButton piece2;
+    public JButton piece3;
+    public JButton piece4;
     private JLabel ch;
     private JButton resetButton;
     private JFrame frame;
