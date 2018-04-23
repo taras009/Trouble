@@ -245,17 +245,17 @@ public class MyDrawPanel extends JPanel {
             if (blueI[i] != -1 && blueI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/blue" + i + ".png64")).getImage();
                 if (!blueRoundDone[i]) {
-                    g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(), this);
+                    g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(),this);
                     attack(blueI[i],OurColor.BLUE);
                 } else g.drawImage(image, blueMovePieces.get(blueI[i]).x(), blueMovePieces.get(blueI[i]).y(), this);
             }
             if (yellowI[i] != -1 && yellowI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/yellow" + i + ".png64")).getImage();
                 if (!yellowRoundDone[i]) {
-                    g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(), this);
+                    g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(),  this);
                     attack(yellowI[i],OurColor.YELLOW);
                 } else
-                    g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(), this);
+                    g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(),  this);
             }
             if (greenI[i] != -1 && greenI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/green" + i + ".png64")).getImage();
