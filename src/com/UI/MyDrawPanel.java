@@ -2,7 +2,6 @@ package com.UI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -140,8 +139,7 @@ public class MyDrawPanel extends JPanel {
     }
 
 
-
-    public void attack(int iii,OurColor color) {
+    public void attack(int iii, OurColor color) {
         for (int x = 0; x < 4; x++) {
             if (color != OurColor.RED && redI[x] == iii && redRoundDone[x] == false) {
                 redI[x] = -1;
@@ -161,7 +159,6 @@ public class MyDrawPanel extends JPanel {
             }
         }
     }
-
 
 
     public void evaluateBasePieces() {
@@ -239,29 +236,29 @@ public class MyDrawPanel extends JPanel {
                 image = new ImageIcon(this.getClass().getResource("images/red" + i + ".png64")).getImage();
                 if (!redRoundDone[i]) {
                     g.drawImage(image, movePieces.get(redI[i]).x(), movePieces.get(redI[i]).y(), this);
-                    attack(redI[i],OurColor.RED);
+                    attack(redI[i], OurColor.RED);
                 } else g.drawImage(image, redMovePieces.get(redI[i]).x(), redMovePieces.get(redI[i]).y(), this);
             }
             if (blueI[i] != -1 && blueI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/blue" + i + ".png64")).getImage();
                 if (!blueRoundDone[i]) {
-                    g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(),this);
-                    attack(blueI[i],OurColor.BLUE);
+                    g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(), this);
+                    attack(blueI[i], OurColor.BLUE);
                 } else g.drawImage(image, blueMovePieces.get(blueI[i]).x(), blueMovePieces.get(blueI[i]).y(), this);
             }
             if (yellowI[i] != -1 && yellowI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/yellow" + i + ".png64")).getImage();
                 if (!yellowRoundDone[i]) {
-                    g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(),  this);
-                    attack(yellowI[i],OurColor.YELLOW);
+                    g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(), this);
+                    attack(yellowI[i], OurColor.YELLOW);
                 } else
-                    g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(),  this);
+                    g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(), this);
             }
             if (greenI[i] != -1 && greenI[i] != -10) {
                 image = new ImageIcon(this.getClass().getResource("images/green" + i + ".png64")).getImage();
                 if (!greenRoundDone[i]) {
                     g.drawImage(image, movePieces.get(greenI[i]).x(), movePieces.get(greenI[i]).y(), this);
-                    attack(greenI[i],OurColor.GREEN);
+                    attack(greenI[i], OurColor.GREEN);
                 } else g.drawImage(image, greenMovePieces.get(greenI[i]).x(), greenMovePieces.get(greenI[i]).y(), this);
             }
         }
@@ -320,49 +317,45 @@ public class MyDrawPanel extends JPanel {
     public void move(int diceNumber, int pieceId) {
         System.out.println("PieceID:" + pieceId);
         int temp = 0;
-        if (chanceToPlay == OurColor.RED) {
-            if (redI[pieceId] == -10) {
-                updateChanceToPlay();
-                return;
-            }
-            System.out.println(redI[pieceId]);
-            if (isRedInPlay[pieceId] == false && diceNumber == 6) {
-                redI[pieceId] = 39 - 1;
-                isRedInPlay[pieceId] = true;
-            }
-            if (isRedInPlay[pieceId] == false && diceNumber != 6) {
-                repaint();
-                updateChanceToPlay();
-                return;
-            }
-            temp = redI[pieceId];
-            while (diceNumber > 0) {
-                // x = movePieces.get(redI[0]).x();
-                // y = movePieces.get(redI[0]).y();
-                redI[pieceId] = redI[pieceId] + 1;
-                if (redI[pieceId] > 47) {
-                    redI[pieceId] = 0;
+        switch (chanceToPlay) {
+            case RED:
+                if (redI[pieceId] == -10) {
+                    updateChanceToPlay();
+                    return;
                 }
-                if (redRoundDone[pieceId] == true && redI[pieceId] > 4) {
-                    if (redI[pieceId] == 5) {
-                        redI[pieceId] = -10;
-                        updateChanceToPlay();
-                    } else redI[pieceId] = temp;
+                System.out.println(redI[pieceId]);
+                if (isRedInPlay[pieceId] == false && diceNumber == 6) {
+                    redI[pieceId] = 39 - 1;
+                    isRedInPlay[pieceId] = true;
+                }
+                if (isRedInPlay[pieceId] == false && diceNumber != 6) {
                     repaint();
                     updateChanceToPlay();
                     return;
                 }
-                if (redI[pieceId] == 38) {
-                    redRoundDone[pieceId] = true;
-                    redI[pieceId] = 0;
+                temp = redI[pieceId];
+                while (diceNumber > 0) {
+                    redI[pieceId] = redI[pieceId] + 1;
+                    if (redI[pieceId] > 47) {
+                        redI[pieceId] = 0;
+                    }
+                    if (redRoundDone[pieceId] == true && redI[pieceId] > 4) {
+                        if (redI[pieceId] == 5) {
+                            redI[pieceId] = -10;
+                            updateChanceToPlay();
+                        } else redI[pieceId] = temp;
+                        repaint();
+                        updateChanceToPlay();
+                        return;
+                    }
+                    if (redI[pieceId] == 38) {
+                        redRoundDone[pieceId] = true;
+                        redI[pieceId] = 0;
+                    }
+                    diceNumber--;
                 }
-                diceNumber--;
-                //     diceNumber=0;
-                repaint();
-            }
-
-        } else {
-            if (chanceToPlay == OurColor.BLUE) {
+                break;
+            case BLUE:
                 System.out.println(blueI[pieceId]);
                 if (blueI[pieceId] == -10) {
                     updateChanceToPlay();
@@ -379,9 +372,6 @@ public class MyDrawPanel extends JPanel {
                 }
                 temp = blueI[pieceId];
                 while (diceNumber > 0) {
-                    // x = movePieces.get(blueI[0]).x();
-                    // y = movePieces.get(blueI[0]).y();
-
                     blueI[pieceId] = blueI[pieceId] + 1;
                     if (blueI[pieceId] > 47) {
                         blueI[pieceId] = 0;
@@ -399,124 +389,103 @@ public class MyDrawPanel extends JPanel {
                         blueRoundDone[0] = true;
                         blueI[0] = 0;
                     }
-
                     diceNumber--;
-//            diceNumber=0;
-                    repaint();
                 }
-            } else {
-                if (chanceToPlay == OurColor.YELLOW) {
-                    System.out.println(yellowI[pieceId]);
-                    if (yellowI[pieceId] == -10) {
-                        updateChanceToPlay();
-                        return;
+                break;
+            case YELLOW:
+                System.out.println(yellowI[pieceId]);
+                if (yellowI[pieceId] == -10) {
+                    updateChanceToPlay();
+                    return;
+                }
+                if (isYellowInPlay[pieceId] == false && diceNumber == 6) {
+                    yellowI[pieceId] = 15 - 1;
+                    isYellowInPlay[pieceId] = true;
+                }
+                if (isYellowInPlay[pieceId] == false && diceNumber != 6) {
+                    repaint();
+                    updateChanceToPlay();
+                    return;
+                }
+                temp = yellowI[pieceId];
+                while (diceNumber > 0) {
+                    if (yellowRoundDone[pieceId]) {
+                        yellowI[pieceId] = yellowI[pieceId] - 1;
+                    } else {
+                        yellowI[pieceId] = yellowI[pieceId] + 1;
                     }
-                    if (isYellowInPlay[pieceId] == false && diceNumber == 6) {
-                        yellowI[pieceId] = 15 - 1;
-                        isYellowInPlay[pieceId] = true;
+                    if (yellowI[pieceId] > 47) {
+                        yellowI[pieceId] = 0;
                     }
-                    if (isYellowInPlay[pieceId] == false && diceNumber != 6) {
+
+                    if (yellowRoundDone[pieceId] == true && yellowI[pieceId] < 0) {
+                        if (yellowI[pieceId] == -1) {
+                            yellowI[pieceId] = -10;
+                            isYellowInPlay[pieceId] = false;
+                        } else yellowI[pieceId] = temp;
                         repaint();
                         updateChanceToPlay();
                         return;
                     }
-                    temp = yellowI[pieceId];
-                    while (diceNumber > 0) {
-                        //        x = movePieces.get(yellowI[0]+diceNumber).x();
-                        //      y = movePieces.get(yellowI[0]+diceNumber).y();
 
 
-                        if (yellowRoundDone[pieceId]) {
-                            yellowI[pieceId] = yellowI[pieceId] - 1;
-                        } else {
-                            yellowI[pieceId] = yellowI[pieceId] + 1;
-                        }
-
-
-                        if (yellowI[pieceId] > 47) {
-                            yellowI[pieceId] = 0;
-                        }
-
-                        if (yellowRoundDone[pieceId] == true && yellowI[pieceId] < 0) {
-                            if (yellowI[pieceId] == -1) {
-                                yellowI[pieceId] = -10;
-                                isYellowInPlay[pieceId] = false;
-                            } else yellowI[pieceId] = temp;
-                            repaint();
-                            updateChanceToPlay();
-                            return;
-                        }
-
-
-                        if (yellowI[pieceId] == 14) {
-                            yellowRoundDone[pieceId] = true;
-                            yellowI[pieceId] = 4;
-                        }
-
-
-                        diceNumber--;
-                        //    diceNumber=0;
-                        //repaint();
+                    if (yellowI[pieceId] == 14) {
+                        yellowRoundDone[pieceId] = true;
+                        yellowI[pieceId] = 4;
                     }
-
-
-                    repaint();
-                } else {
-                    if (chanceToPlay == OurColor.GREEN) {
-                        if (greenI[pieceId] == -10) {
-                            updateChanceToPlay();
-                            return;
-                        }
-                        System.out.println(greenI[pieceId]);
-                        if (isGreenInPlay[pieceId] == false && diceNumber == 6) {
-                            greenI[pieceId] = 27 - 1;
-                            isGreenInPlay[pieceId] = true;
-                        }
-                        if (isGreenInPlay[pieceId] == false && diceNumber != 6) {
-                            repaint();
-                            updateChanceToPlay();
-                            return;
-                        }
-                        temp = greenI[pieceId];
-                        while (diceNumber > 0) {
-                            //      x = movePieces.get(greenI[0]+diceNumber).x();
-                            //   y  = movePieces.get(greenI[0]+diceNumber).y();
-                            if (greenRoundDone[pieceId]) {
-                                greenI[pieceId] = greenI[pieceId] - 1;
-                            } else {
-                                greenI[pieceId] = greenI[pieceId] + 1;
-                            }
-                            if (greenI[pieceId] > 47) {
-                                greenI[pieceId] = 0;
-                            }
-
-                            if (greenRoundDone[pieceId] == true && greenI[pieceId] < 0) {
-                                if (greenI[pieceId] == -1) {
-                                    greenI[pieceId] = -10;
-                                    isGreenInPlay[pieceId] = false;
-                                } else greenI[pieceId] = temp;
-                                repaint();
-                                updateChanceToPlay();
-                                return;
-                            }
-                            if (greenI[0] == 26) {
-                                greenRoundDone[pieceId] = true;
-                                greenI[pieceId] = 4;
-                            }
-
-
-                            diceNumber--;
-                            //   diceNumber=0;
-                            repaint();
-
-                        }
-                    }
+                    diceNumber--;
                 }
-            }
+                break;
+            case GREEN:
+                if (greenI[pieceId] == -10) {
+                    updateChanceToPlay();
+                    return;
+                }
+                System.out.println(greenI[pieceId]);
+                if (isGreenInPlay[pieceId] == false && diceNumber == 6) {
+                    greenI[pieceId] = 27 - 1;
+                    isGreenInPlay[pieceId] = true;
+                }
+                if (isGreenInPlay[pieceId] == false && diceNumber != 6) {
+                    repaint();
+                    updateChanceToPlay();
+                    return;
+                }
+                temp = greenI[pieceId];
+                while (diceNumber > 0) {
+
+                    if (greenRoundDone[pieceId]) {
+                        greenI[pieceId] = greenI[pieceId] - 1;
+                    } else {
+                        greenI[pieceId] = greenI[pieceId] + 1;
+                    }
+                    if (greenI[pieceId] > 47) {
+                        greenI[pieceId] = 0;
+                    }
+
+                    if (greenRoundDone[pieceId] == true && greenI[pieceId] < 0) {
+                        if (greenI[pieceId] == -1) {
+                            greenI[pieceId] = -10;
+                            isGreenInPlay[pieceId] = false;
+                        } else greenI[pieceId] = temp;
+                        repaint();
+                        updateChanceToPlay();
+                        return;
+                    }
+                    if (greenI[0] == 26) {
+                        greenRoundDone[pieceId] = true;
+                        greenI[pieceId] = 4;
+                    }
+                    diceNumber--;
+                }
+                break;
+            default:
+                ;
+
         }
+        repaint();
         updateChanceToPlay();
     }
-
 
     @Override
     public void paint(Graphics g) {
