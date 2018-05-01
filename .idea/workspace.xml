@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a8c88d2-b233-47ef-b9b3-cf878e60cb4d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_src/com/UI/OurColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test_src/com/UI/OurColorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="PiecesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_src/com/UI/PiecesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="148">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,29 +26,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyDrawPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2794">
-              <caret line="258" column="92" selection-start-line="258" selection-start-column="92" selection-end-line="258" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyDrawPanelTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Pieces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1006">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="480">
+              <caret line="47" column="70" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,13 +50,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;MOVE--&gt; &quot;</find>
+      <find />
       <find>base</find>
       <find>piecesOrder</find>
       <find>level</find>
       <find>13</find>
-      <find>Base Piece ka</find>
-      <find>Base Piece</find>
+      <find />
+      <find />
       <find>6</find>
       <find>diceNumber</find>
       <find>MyDrawPanel</find>
@@ -107,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" />
         <option value="$PROJECT_DIR$/src/com/UI/Pieces.java" />
         <option value="$PROJECT_DIR$/test_src/com/UI/OurColorTest.java" />
-        <option value="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" />
         <option value="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" />
+        <option value="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" />
       </list>
     </option>
   </component>
@@ -210,11 +191,6 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
     </configuration>
-    <configuration name="LocalTrouble" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LocalTrouble" />
-      <module name="cs474trouble" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
     <configuration name="TroubleBoard (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TroubleBoard" />
       <module name="cs474trouble" />
@@ -233,6 +209,29 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="PiecesTest.getImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs474trouble" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.UI" />
+      <option name="MAIN_CLASS_NAME" value="com.UI.PiecesTest" />
+      <option name="METHOD_NAME" value="getImage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="PiecesTest.getIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cs474trouble" />
@@ -332,19 +331,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="Application.LocalTrouble" />
       <item itemvalue="Application.TroubleBoard" />
       <item itemvalue="Application.TroubleBoard (1)" />
       <item itemvalue="JUnit.PiecesTest.x" />
       <item itemvalue="JUnit.PiecesTest.getIndex" />
+      <item itemvalue="JUnit.PiecesTest.getImage" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PiecesTest.getIndex" />
         <item itemvalue="JUnit.PiecesTest.x" />
+        <item itemvalue="JUnit.PiecesTest.getImage" />
         <item itemvalue="Application.TroubleBoard" />
         <item itemvalue="Application.TroubleBoard (1)" />
-        <item itemvalue="Application.LocalTrouble" />
       </list>
     </recent_temporary>
   </component>
@@ -440,12 +439,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PopOMaticTest_roll - 2018.04.22 at 10h 35m 07s.xml">
-      <configuration name="PopOMaticTest.roll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PopOMaticTest - 2018.04.22 at 10h 36m 18s.xml">
-      <configuration name="PopOMaticTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PopOMaticTest_roll - 2018.04.22 at 10h 36m 38s.xml">
       <configuration name="PopOMaticTest.roll" configurationId="JUnit" />
     </history-entry>
@@ -470,6 +463,12 @@
     <history-entry file="PiecesTest_getIndex - 2018.05.01 at 14h 41m 28s.xml">
       <configuration name="PiecesTest.getIndex" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PiecesTest_x - 2018.05.01 at 16h 38m 19s.xml">
+      <configuration name="PiecesTest.x" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PiecesTest_getIndex - 2018.05.01 at 16h 39m 42s.xml">
+      <configuration name="PiecesTest.getIndex" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -477,18 +476,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47890624" weight="0.32859176" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47734374" weight="0.32859176" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.546875" side_tool="true" visible="true" weight="0.40113798" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.54765624" side_tool="true" visible="true" weight="0.40113798" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.453125" visible="true" weight="0.40113798" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.45234376" visible="true" weight="0.40113798" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49785176" weight="0.32918552" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -665,20 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1006">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_src/com/UI/PopOMaticTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -693,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2794">
-          <caret line="258" column="92" selection-start-line="258" selection-start-column="92" selection-end-line="258" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_src/com/UI/OurColorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -707,10 +685,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2794">
+          <caret line="258" column="92" selection-start-line="258" selection-start-column="92" selection-end-line="258" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="70" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_src/com/UI/PiecesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="148">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

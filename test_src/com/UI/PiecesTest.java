@@ -11,20 +11,22 @@ public class PiecesTest {
 
     @Test
     public void getImage() {
-        Image expectedImage; // Not sure what should I enter here
-        Pieces pieces = new Pieces(expectedImage);
-        assertNotNull(Image expectedImage);
+        Image expectedImage = new BasePiece(0,0).getImage();
+        Pieces pieces = new Pieces(0,0);
+        pieces.setImage(expectedImage);
+        assertNotNull(pieces.getImage());
     }
 
     @Test
     public void setImage() {
+        // test
     }
 
     @Test
     public void x() {
-        int expectedX; // Not sure what should I enter here
+        int expectedX = 6; // Not sure what should I enter here
         Pieces pieces = new Pieces(expectedX, 0);
-        Assert.assertNotNull(expectedX, pieces.x());
+        Assert.assertNotNull(pieces.x());
     }
 
     @Test
@@ -36,9 +38,11 @@ public class PiecesTest {
 
     @Test
     public void getIndex() {
+        
         int expectedIndex = 6;
-        Pieces pieces = new Pieces(expectedIndex, 0);
-        Assert.assertEquals(expectedIndex, pieces.y());
+        Pieces pieces = new Pieces(0,0);
+        pieces.setIndex(expectedIndex);
+        assertNotNull(pieces.getIndex());
 
     }
 
@@ -51,5 +55,6 @@ public class PiecesTest {
 
     @Test
     public void compareTo() {
+        // test
     }
 }
