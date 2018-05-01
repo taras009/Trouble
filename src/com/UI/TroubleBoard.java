@@ -87,25 +87,25 @@ public class TroubleBoard {
 
 
     public void isWinner() {
-        if (drawPanel.redI[0] == -10 && drawPanel.redI[1] == -10 && drawPanel.redI[2] == -10 && drawPanel.redI[3] == -10) {
+        if (drawPanel.redRoundDone[0] && drawPanel.redRoundDone[1] && drawPanel.redRoundDone[2] && drawPanel.redRoundDone[3]) {
             position++;
             button.setText("RED Position : " + position);
             JOptionPane.showMessageDialog(null, "RED stands : "+position+" in the game!");
         }
 
-        if (drawPanel.blueI[0] == -10 && drawPanel.blueI[1] == -10 && drawPanel.blueI[2] == -10 && drawPanel.blueI[3] == -10) {
+        if (drawPanel.blueRoundDone[0] && drawPanel.blueRoundDone[1] && drawPanel.blueRoundDone[2] && drawPanel.blueRoundDone[3]) {
             position++;
             button.setText("BLUE Position : " + position);
             JOptionPane.showMessageDialog(null, "BLUE stands : "+position+" in the game!");
         }
 
-        if (drawPanel.yellowI[0] == -10 && drawPanel.yellowI[1] == -10 && drawPanel.yellowI[2] == -10 && drawPanel.yellowI[3] == -10) {
+        if (drawPanel.yellowRoundDone[0] && drawPanel.yellowRoundDone[1] && drawPanel.yellowRoundDone[2] && drawPanel.yellowRoundDone[3]) {
             position++;
             button.setText("YELLOW Position : " + position);
             JOptionPane.showMessageDialog(null, "YELLOW stands : "+position+" in the game!");
         }
 
-        if (drawPanel.greenI[0] == -10 && drawPanel.greenI[1] == -10 && drawPanel.greenI[2] == -10 && drawPanel.greenI[3] == -10) {
+        if (drawPanel.greenRoundDone[0] && drawPanel.greenRoundDone[1] && drawPanel.greenRoundDone[2] && drawPanel.greenRoundDone[3]) {
             position++;
             button.setText("GREEN Position : " + position);
             JOptionPane.showMessageDialog(null, "GREEN stands : "+position+" in the game!");
