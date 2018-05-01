@@ -8,6 +8,7 @@ public class MyDrawPanelTest {
 
     @Test
     public void initWorld() {
+        // xxx
     }
 
     @Test
