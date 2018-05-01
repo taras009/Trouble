@@ -101,7 +101,7 @@ class BasePiece extends Pieces {
     public BasePiece(int x, int y) {
         super(x, y);
         URL loc = null;
-        System.out.println("Base Piece ka constructor" + x + " " + y);
+        System.out.println("Constructor for Base Piece" + x + " " + y);
         if (x <= 100 && y <= 100) {
             loc = this.getClass().getResource("images/red.png64");
         } else if (x <= 100 && y >= 500) {

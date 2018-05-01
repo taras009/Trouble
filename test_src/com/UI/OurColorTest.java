@@ -1,16 +1,14 @@
 package com.UI;
 
-import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.*;
-
 public class OurColorTest {
-    @Test
-    public void checkcolor() {
-        // Not sure what to test
-    }
+    OurColor color1;
 
-}
+    @Test
+    public void checkcolors() {
+        OurColor color1;
+        //assertEquals("RED", color1.RED);
+
+    }
+    }
