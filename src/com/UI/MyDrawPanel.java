@@ -234,21 +234,21 @@ public class MyDrawPanel extends JPanel {
         Image image = null;
         for (int i = 0; i < 4; i++) {
             if (redI[i] != -1 && redI[i] != -10) {
-                image = new ImageIcon(this.getClass().getResource("images/red" + i + ".png64")).getImage();
+                image = new ImageIcon(this.getClass().getResource("images/red" + i + ".png")).getImage();
                 if (!redRoundDone[i]) {
                     g.drawImage(image, movePieces.get(redI[i]).x(), movePieces.get(redI[i]).y(), this);
                     attack(redI[i], OurColor.RED);
                 } else g.drawImage(image, redMovePieces.get(redI[i]).x(), redMovePieces.get(redI[i]).y(), this);
             }
             if (blueI[i] != -1 && blueI[i] != -10) {
-                image = new ImageIcon(this.getClass().getResource("images/blue" + i + ".png64")).getImage();
+                image = new ImageIcon(this.getClass().getResource("images/blue" + i + ".png")).getImage();
                 if (!blueRoundDone[i]) {
                     g.drawImage(image, movePieces.get(blueI[i]).x(), movePieces.get(blueI[i]).y(), this);
                     attack(blueI[i], OurColor.BLUE);
                 } else g.drawImage(image, blueMovePieces.get(blueI[i]).x(), blueMovePieces.get(blueI[i]).y(), this);
             }
             if (yellowI[i] != -1 && yellowI[i] != -10) {
-                image = new ImageIcon(this.getClass().getResource("images/yellow" + i + ".png64")).getImage();
+                image = new ImageIcon(this.getClass().getResource("images/yellow" + i + ".png")).getImage();
                 if (!yellowRoundDone[i]) {
                     g.drawImage(image, movePieces.get(yellowI[i]).x(), movePieces.get(yellowI[i]).y(), this);
                     attack(yellowI[i], OurColor.YELLOW);
@@ -256,7 +256,7 @@ public class MyDrawPanel extends JPanel {
                     g.drawImage(image, yellowMovePieces.get(yellowI[i]).x(), yellowMovePieces.get(yellowI[i]).y(), this);
             }
             if (greenI[i] != -1 && greenI[i] != -10) {
-                image = new ImageIcon(this.getClass().getResource("images/green" + i + ".png64")).getImage();
+                image = new ImageIcon(this.getClass().getResource("images/green" + i + ".png")).getImage();
                 if (!greenRoundDone[i]) {
                     g.drawImage(image, movePieces.get(greenI[i]).x(), movePieces.get(greenI[i]).y(), this);
                     attack(greenI[i], OurColor.GREEN);
