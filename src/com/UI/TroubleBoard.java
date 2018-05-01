@@ -90,21 +90,25 @@ public class TroubleBoard {
         if (drawPanel.redI[0] == -10 && drawPanel.redI[1] == -10 && drawPanel.redI[2] == -10 && drawPanel.redI[2] == -10) {
             position++;
             button.setText("RED Position : " + position);
+            JOptionPane.showMessageDialog(null, "RED stands : "+position+" in the game!");
         }
 
         if (drawPanel.blueI[0] == -10 && drawPanel.blueI[1] == -10 && drawPanel.blueI[2] == -10 && drawPanel.blueI[2] == -10) {
             position++;
             button.setText("BLUE Position : " + position);
+            JOptionPane.showMessageDialog(null, "BLUE stands : "+position+" in the game!");
         }
 
         if (drawPanel.yellowI[0] == -10 && drawPanel.yellowI[1] == -10 && drawPanel.yellowI[2] == -10 && drawPanel.yellowI[2] == -10) {
             position++;
             button.setText("YELLOW Position : " + position);
+            JOptionPane.showMessageDialog(null, "YELLOW stands : "+position+" in the game!");
         }
 
         if (drawPanel.greenI[0] == -10 && drawPanel.greenI[1] == -10 && drawPanel.greenI[2] == -10 && drawPanel.greenI[2] == -10) {
             position++;
             button.setText("GREEN Position : " + position);
+            JOptionPane.showMessageDialog(null, "GREEN stands : "+position+" in the game!");
         }
     }
 
