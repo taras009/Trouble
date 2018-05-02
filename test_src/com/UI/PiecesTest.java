@@ -19,26 +19,26 @@ public class PiecesTest {
 
     @Test
     public void setImage() {
-// add test
+// setImage
     }
 
     @Test
     public void x() {
-        int expectedX = 6; // Not sure how to initialize it
+        int expectedX = 6;
         Pieces pieces = new Pieces(expectedX, 0);
         Assert.assertNotNull(pieces.x());
     }
 
     @Test
     public void y() {
-        int expectedY = 0; // Not sure how to initialize it
+        int expectedY = 0;
         Pieces pieces = new Pieces(expectedY, 0);
         Assert.assertEquals(expectedY, pieces.y());
     }
 
     @Test
     public void getIndex() {
-        int expectedIndex = 6; // Not sure how to initialize it
+        int expectedIndex = 6;
         Pieces pieces = new Pieces(0,0);
         pieces.setIndex(expectedIndex);
         assertNotNull(pieces.getIndex());
