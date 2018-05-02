@@ -142,19 +142,19 @@ public class MyDrawPanel extends JPanel {
     public void attack(int iii, OurColor color) {
         System.out.println("Attack by " + color.name());
         for (int x = 0; x < 4; x++) {
-            if (color != OurColor.RED && redI[x] == iii && redRoundDone[x] == false) {
+            if (color != OurColor.RED && redI[x] == iii && !redRoundDone[x]) {
                 redI[x] = -1;
                 isRedInPlay[x] = false;
             }
-            if (color != OurColor.BLUE && blueI[x] == iii && blueRoundDone[x] == false) {
+            if (color != OurColor.BLUE && blueI[x] == iii && !blueRoundDone[x]) {
                 blueI[x] = -1;
                 isBlueInPlay[x] = false;
             }
-            if (color != OurColor.YELLOW && yellowI[x] == iii && yellowRoundDone[x] == false) {
+            if (color != OurColor.YELLOW && yellowI[x] == iii && !yellowRoundDone[x]) {
                 yellowI[x] = -1;
                 isYellowInPlay[x] = false;
             }
-            if (color != OurColor.GREEN && greenI[x] == iii && greenRoundDone[x] == false) {
+            if (color != OurColor.GREEN && greenI[x] == iii && !greenRoundDone[x]) {
                 greenI[x] = -1;
                 isGreenInPlay[x] = false;
             }
@@ -294,19 +294,19 @@ public class MyDrawPanel extends JPanel {
 
         switch (chanceToPlay) {
             case RED:
-                if (isRedInPlay[pieceId] == true || (diceNum == 6 && redRoundDone[pieceId] == false))
+                if (isRedInPlay[pieceId] || (diceNum == 6 && !redRoundDone[pieceId]))
                     return true;
                 break;
             case BLUE:
-                if (isBlueInPlay[pieceId] == true || (diceNum == 6 && blueRoundDone[pieceId] == false))
+                if (isBlueInPlay[pieceId] || (diceNum == 6 && !blueRoundDone[pieceId]))
                     return true;
                 break;
             case YELLOW:
-                if (isYellowInPlay[pieceId] == true || (diceNum == 6 && yellowRoundDone[pieceId] == false))
+                if (isYellowInPlay[pieceId] || (diceNum == 6 && !yellowRoundDone[pieceId]))
                     return true;
                 break;
             case GREEN:
-                if (isGreenInPlay[pieceId] == true || (diceNum == 6 && greenRoundDone[pieceId] == false))
+                if (isGreenInPlay[pieceId]|| (diceNum == 6 && !greenRoundDone[pieceId]))
                     return true;
                 break;
             default:
@@ -322,17 +322,17 @@ public class MyDrawPanel extends JPanel {
             case RED:
                 System.out.println(redI[pieceId]);
                 //if done, do nothing
-                if (isRedInPlay[pieceId] == false && redRoundDone[pieceId] == true) {
+                if (!isRedInPlay[pieceId] && redRoundDone[pieceId]) {
                     updateChanceToPlay();
                     return;
                 }
                 //if not started and 6, start
-                if (isRedInPlay[pieceId] == false && redRoundDone[pieceId] == false && diceNumber == 6) {
+                if (!isRedInPlay[pieceId] && !redRoundDone[pieceId] && diceNumber == 6) {
                     redI[pieceId] = 39 - 1;
                     isRedInPlay[pieceId] = true;
                 }
                 //if not 6 and not started do nothing
-                if (isRedInPlay[pieceId] == false) {
+                if (!isRedInPlay[pieceId]) {
                     repaint();
                     updateChanceToPlay();
                     return;
@@ -345,7 +345,7 @@ public class MyDrawPanel extends JPanel {
                         redI[pieceId] = 0;
                     }
                     //if in finish and done
-                    if (redRoundDone[pieceId] == true && redI[pieceId] >= 3) {
+                    if (redRoundDone[pieceId] && redI[pieceId] >= 3) {
                         isRedInPlay[pieceId] = false;
                         repaint();
                         updateChanceToPlay();
@@ -361,15 +361,15 @@ public class MyDrawPanel extends JPanel {
                 break;
             case BLUE:
                 System.out.println(blueI[pieceId]);
-                if (isBlueInPlay[pieceId] == false && blueRoundDone[pieceId] == true) {
+                if (!isBlueInPlay[pieceId] && blueRoundDone[pieceId]) {
                     updateChanceToPlay();
                     return;
                 }
-                if (isBlueInPlay[pieceId] == false && blueRoundDone[pieceId] == false && diceNumber == 6) {
+                if (!isBlueInPlay[pieceId] && !blueRoundDone[pieceId] && diceNumber == 6) {
                     blueI[pieceId] = 3 - 1;
                     isBlueInPlay[pieceId] = true;
                 }
-                if (isBlueInPlay[pieceId] == false && diceNumber != 6) {
+                if (!isBlueInPlay[pieceId] && diceNumber != 6) {
                     repaint();
                     updateChanceToPlay();
                     return;
@@ -380,13 +380,13 @@ public class MyDrawPanel extends JPanel {
                     if (blueI[pieceId] > 47) {
                         blueI[pieceId] = 0;
                     }
-                    if (blueRoundDone[pieceId] == true && blueI[pieceId] >= 3) {
+                    if (blueRoundDone[pieceId] && blueI[pieceId] >= 3) {
                         isBlueInPlay[pieceId] = false;
                         repaint();
                         updateChanceToPlay();
                         return;
                     }
-                    if (blueI[pieceId] == 2 && blueRoundDone[pieceId] == false) {
+                    if (blueI[pieceId] == 2 && !blueRoundDone[pieceId]) {
                         blueRoundDone[pieceId] = true;
                         blueI[pieceId] = 0;
                     }
@@ -395,15 +395,15 @@ public class MyDrawPanel extends JPanel {
                 break;
             case YELLOW:
                 System.out.println(yellowI[pieceId]);
-                if (isYellowInPlay[pieceId] == false && yellowRoundDone[pieceId] == true) {
+                if (!isYellowInPlay[pieceId] && yellowRoundDone[pieceId]) {
                     updateChanceToPlay();
                     return;
                 }
-                if (isYellowInPlay[pieceId] == false && yellowRoundDone[pieceId] == false && diceNumber == 6) {
+                if (!isYellowInPlay[pieceId] && !yellowRoundDone[pieceId] && diceNumber == 6) {
                     yellowI[pieceId] = 15 - 1;
                     isYellowInPlay[pieceId] = true;
                 }
-                if (isYellowInPlay[pieceId] == false && diceNumber != 6) {
+                if (!isYellowInPlay[pieceId] && diceNumber != 6) {
                     repaint();
                     updateChanceToPlay();
                     return;
@@ -418,7 +418,7 @@ public class MyDrawPanel extends JPanel {
                         yellowI[pieceId] = 0;
                     }
 
-                    if (yellowRoundDone[pieceId] == true && yellowI[pieceId] >= 3) {
+                    if (yellowRoundDone[pieceId] && yellowI[pieceId] == 0) {
                         isYellowInPlay[pieceId] = false;
                         repaint();
                         updateChanceToPlay();
@@ -432,16 +432,16 @@ public class MyDrawPanel extends JPanel {
                 }
                 break;
             case GREEN:
-                if (isGreenInPlay[pieceId] == false && greenRoundDone[pieceId] == true) {
+                if (!isGreenInPlay[pieceId] && greenRoundDone[pieceId]) {
                     updateChanceToPlay();
                     return;
                 }
                 System.out.println(greenI[pieceId]);
-                if (isGreenInPlay[pieceId] == false && greenRoundDone[pieceId] == false && diceNumber == 6) {
+                if (!isGreenInPlay[pieceId] && !greenRoundDone[pieceId] && diceNumber == 6) {
                     greenI[pieceId] = 27 - 1;
                     isGreenInPlay[pieceId] = true;
                 }
-                if (isGreenInPlay[pieceId] == false && diceNumber != 6) {
+                if (!isGreenInPlay[pieceId] && diceNumber != 6) {
                     repaint();
                     updateChanceToPlay();
                     return;
@@ -456,7 +456,7 @@ public class MyDrawPanel extends JPanel {
                     if (greenI[pieceId] > 47) {
                         greenI[pieceId] = 0;
                     }
-                    if (greenRoundDone[pieceId] == true && greenI[pieceId] >= 3) {
+                    if (greenRoundDone[pieceId] && greenI[pieceId] == 0) {
                         isGreenInPlay[pieceId] = false;
                         repaint();
                         updateChanceToPlay();
