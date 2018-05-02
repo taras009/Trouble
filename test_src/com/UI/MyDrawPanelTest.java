@@ -26,9 +26,6 @@ public class MyDrawPanelTest {
 
     @Test
     public void updateChanceToPlay() {
-       /* int diceNumber = 6; // Not sure how to initialize it
-
-        Assert.assertTrue(MyDrawPanel.JPanel.); */
     }
 
     @Test
