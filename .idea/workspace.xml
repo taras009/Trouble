@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a8c88d2-b233-47ef-b9b3-cf878e60cb4d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PiecesTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TroubleBoard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PiecesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_src/com/UI/PiecesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+            <state relative-caret-position="164">
+              <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,10 +37,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MyDrawPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="267" column="34" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyDrawPanelTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Pieces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="94">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,13 +93,16 @@
       <find>MOVE--&gt;</find>
       <find>buttonControl</find>
       <find>position</find>
-      <find>move</find>
       <find>HasMove</find>
       <find>iswinner</find>
       <find>avail</find>
       <find>getindex</find>
       <find>index</find>
+      <find>evaluate</find>
       <find>compareto</find>
+      <find>move</find>
+      <find>dicenumber</find>
+      <find>updatechancetoplay</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/com/UI/MyDrawPanel.java" />
         <option value="$PROJECT_DIR$/src/com/UI/Pieces.java" />
         <option value="$PROJECT_DIR$/test_src/com/UI/OurColorTest.java" />
-        <option value="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" />
         <option value="$PROJECT_DIR$/test_src/com/UI/PiecesTest.java" />
+        <option value="$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java" />
       </list>
     </option>
   </component>
@@ -188,25 +220,54 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PiecesTest.compareTo">
+  <component name="RunManager" selected="JUnit.MyDrawPanelTest.updateChanceToPlay">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
     </configuration>
-    <configuration name="TroubleBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.UI.TroubleBoard" />
-      <module name="cs474trouble" />
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in cs474trouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs474trouble" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MyDrawPanelTest.updateChanceToPlay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cs474trouble" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.UI" />
+      <option name="MAIN_CLASS_NAME" value="com.UI.MyDrawPanelTest" />
+      <option name="METHOD_NAME" value="updateChanceToPlay" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="PiecesTest.compareTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cs474trouble" />
@@ -231,7 +292,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="PiecesTest.getImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PiecesTest.setIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cs474trouble" />
       <extension name="coverage">
         <pattern>
@@ -243,7 +304,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.UI" />
       <option name="MAIN_CLASS_NAME" value="com.UI.PiecesTest" />
-      <option name="METHOD_NAME" value="getImage" />
+      <option name="METHOD_NAME" value="setIndex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -254,7 +315,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="PiecesTest.getIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PiecesTest.y" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cs474trouble" />
       <extension name="coverage">
         <pattern>
@@ -266,30 +327,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.UI" />
       <option name="MAIN_CLASS_NAME" value="com.UI.PiecesTest" />
-      <option name="METHOD_NAME" value="getIndex" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="PiecesTest.x" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cs474trouble" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.UI" />
-      <option name="MAIN_CLASS_NAME" value="com.UI.PiecesTest" />
-      <option name="METHOD_NAME" value="x" />
+      <option name="METHOD_NAME" value="y" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -352,19 +390,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="Application.TroubleBoard" />
-      <item itemvalue="JUnit.PiecesTest.x" />
-      <item itemvalue="JUnit.PiecesTest.getIndex" />
-      <item itemvalue="JUnit.PiecesTest.getImage" />
       <item itemvalue="JUnit.PiecesTest.compareTo" />
+      <item itemvalue="JUnit.All in cs474trouble" />
+      <item itemvalue="JUnit.PiecesTest.y" />
+      <item itemvalue="JUnit.PiecesTest.setIndex" />
+      <item itemvalue="JUnit.MyDrawPanelTest.updateChanceToPlay" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyDrawPanelTest.updateChanceToPlay" />
+        <item itemvalue="JUnit.All in cs474trouble" />
+        <item itemvalue="JUnit.PiecesTest.setIndex" />
+        <item itemvalue="JUnit.PiecesTest.y" />
         <item itemvalue="JUnit.PiecesTest.compareTo" />
-        <item itemvalue="JUnit.PiecesTest.getIndex" />
-        <item itemvalue="JUnit.PiecesTest.x" />
-        <item itemvalue="JUnit.PiecesTest.getImage" />
-        <item itemvalue="Application.TroubleBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -460,21 +498,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TroubleBoardTest_movesAvailable - 2018.04.22 at 11h 04m 47s.xml">
-      <configuration name="TroubleBoardTest.movesAvailable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PiecesTest_x - 2018.05.01 at 14h 13m 54s.xml">
-      <configuration name="PiecesTest.x" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PiecesTest_getIndex - 2018.05.01 at 14h 40m 18s.xml">
-      <configuration name="PiecesTest.getIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PiecesTest_getIndex - 2018.05.01 at 14h 41m 28s.xml">
-      <configuration name="PiecesTest.getIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PiecesTest_x - 2018.05.01 at 16h 38m 19s.xml">
-      <configuration name="PiecesTest.x" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PiecesTest_getIndex - 2018.05.01 at 16h 39m 42s.xml">
       <configuration name="PiecesTest.getIndex" configurationId="JUnit" />
     </history-entry>
@@ -490,6 +513,21 @@
     <history-entry file="PiecesTest_compareTo - 2018.05.01 at 17h 03m 09s.xml">
       <configuration name="PiecesTest.compareTo" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PiecesTest_compareTo - 2018.05.01 at 18h 52m 35s.xml">
+      <configuration name="PiecesTest.compareTo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_cs474trouble - 2018.05.01 at 18h 53m 45s.xml">
+      <configuration name="All in cs474trouble" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PiecesTest_y - 2018.05.01 at 20h 34m 58s.xml">
+      <configuration name="PiecesTest.y" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PiecesTest_setIndex - 2018.05.01 at 20h 35m 08s.xml">
+      <configuration name="PiecesTest.setIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_cs474trouble - 2018.05.01 at 20h 35m 56s.xml">
+      <configuration name="All in cs474trouble" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -497,13 +535,13 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47734374" weight="0.32859176" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="0.4765625" visible="true" weight="0.32859176" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.18984374" side_tool="true" visible="true" weight="0.39829302" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5234375" side_tool="true" visible="true" weight="0.32859176" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45234376" weight="0.40113798" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66875" weight="0.40113798" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49785176" weight="0.32918552" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -513,7 +551,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8101562" visible="true" weight="0.39829302" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.809375" weight="0.39829302" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -671,13 +709,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/UI/images/board_piece.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/OurColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -706,23 +737,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/UI/TroubleBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2794">
-          <caret line="258" column="92" selection-start-line="258" selection-start-column="92" selection-end-line="258" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="135">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/UI/Pieces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="94">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -733,11 +757,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_src/com/UI/PiecesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+        <state relative-caret-position="164">
+          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/UI/MyDrawPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="267" column="34" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_src/com/UI/MyDrawPanelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>

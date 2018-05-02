@@ -316,7 +316,7 @@ public class MyDrawPanel extends JPanel {
     }
 
 
-    public void move(int diceNumber, int pieceId) {
+    public static void move(int diceNumber, int pieceId) {
         System.out.println("PieceID:" + pieceId);
         switch (chanceToPlay) {
             case RED:

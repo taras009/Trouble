@@ -31,7 +31,7 @@ public class PiecesTest {
 
     @Test
     public void y() {
-        int expectedY = 6; // Not sure how to initialize it
+        int expectedY = 0; // Not sure how to initialize it
         Pieces pieces = new Pieces(expectedY, 0);
         Assert.assertEquals(expectedY, pieces.y());
     }
@@ -47,14 +47,14 @@ public class PiecesTest {
 
     @Test
     public void setIndex() {
-        int expectedIndex = 6;
+        int expectedIndex = 0;
         Pieces pieces = new Pieces(expectedIndex, 0);
         Assert.assertEquals(expectedIndex, pieces.y());
     }
 
     @Test
     public void compareTo() {
-       /* 
+       /*
         int compareVal1 = 4;
         Pieces pieces = new Pieces(compareVal1, 0);
         Assert.assertEquals(compareVal1, pieces.compareTo(compareVal1));
